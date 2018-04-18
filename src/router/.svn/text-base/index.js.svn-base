@@ -1,0 +1,65 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+Vue.use(Router)
+// 首页
+const home = resolve => require.ensure([], () => resolve(require('@/page/home/home')), 'home')
+// 商品
+const commodity = resolve => require.ensure([], () => resolve(require('@/page/commodity/commodity')), 'commodity')
+const commManage = resolve => require.ensure([], () => resolve(require('@/page/commodity/child/commManage')), 'commManage')
+const sortManage = resolve => require.ensure([], () => resolve(require('@/page/commodity/child/sortManage')), 'sortManage')
+const labelRoles = resolve => require.ensure([], () => resolve(require('@/page/commodity/child/labelRoles')), 'labelRoles')
+const brandsManage = resolve => require.ensure([], () => resolve(require('@/page/commodity/child/brandsManage')), 'brandsManage')
+// 订单
+const order = resolve => require.ensure([], () => resolve(require('@/page/order/order')), 'order')
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: home,
+      meta: {
+        requiresAuth: true,
+        keepAlive: false
+      }
+    },
+    // 商品
+    {
+      path: '/commodity',
+      name: 'commodity',
+      component: commodity,
+      redirect: '/commodity',
+      meta: {
+        requiresAuth: true,
+        keepAlive: false
+      },
+      children: [
+        {
+          path: '',
+          component: commManage
+        },
+        {
+          path: 'sortManage',
+          component: sortManage
+        },
+        {
+          path: 'labelRoles',
+          component: labelRoles
+        },
+        {
+          path: 'brandsManage',
+          component: brandsManage
+        }
+      ]
+    },
+    // 订单
+    {
+      path: '/order',
+      name: 'order',
+      component: order,
+      meta: {
+        requiresAuth: true,
+        keepAlive: false
+      }
+    }
+  ]
+})

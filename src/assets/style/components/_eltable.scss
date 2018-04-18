@@ -1,0 +1,30 @@
+.app{
+  .el-form-item{
+    margin-bottom: 18px;
+  }
+  .form-block{
+    .el-col-offset-12{
+      margin-right: 50%;
+      margin-left: 0;
+    }
+  }
+  .el-table{
+    color:$table-text-color;
+  }
+  .el-table__header-wrapper{
+    th{
+      background-color: #F0F0F0;
+      color:$table-text-color;
+      font-size: $xs-size;
+      font-weight: bold;
+      border-bottom: 1px solid #B3B5BA;
+    }
+  }
+  .el-table th{
+    padding: 8px 0;
+  }
+  .el-table td{
+    border-bottom-color:$border-color;
+    font-size: $xs-size;
+  }
+}

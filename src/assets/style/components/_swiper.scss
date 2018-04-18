@@ -1,0 +1,17 @@
+.app {
+  .el-carousel__indicator{
+     &.is-active{
+       .el-carousel__button{
+         background:$main-color;
+       }
+     }
+    .el-carousel__button{
+        width:8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #fff;
+        opacity: 1;
+      }
+  } 
+
+}

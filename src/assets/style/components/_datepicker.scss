@@ -1,0 +1,8 @@
+.app{
+  .el-date-table td.current:not(.disabled) span{
+    background-color:$main-color;
+  }
+  .el-date-table td.today span{
+    color:$main-color;
+  }
+}

@@ -1,0 +1,64 @@
+.app{
+  .el-button{
+    font-size: $xs-size;
+    border-color:$input-border-color;
+  }
+  .el-button+.el-button{
+    margin-left:6px;
+  }
+  .el-button:focus, .el-button:hover{
+    border-color: lighten($main-color,6%);
+    color:lighten($main-color,6%);
+    background: #fff;
+  }
+  .el-button--primary{
+    background-color: $main-color;
+    border-color: $main-color;
+  }
+  .el-button--primary:focus, .el-button--primary:hover{
+    background-color: lighten($main-color,6%);
+    border-color: lighten($main-color,6%);
+    color:$text-header-color;
+  }
+  .el-upload--picture-card{
+    width:80px;
+    height:80px;
+    line-height: 90px;
+  }
+  .el-upload-list--picture-card .el-upload-list__item-status-label{
+    background-color:$main-color;
+  }
+  .el-upload--picture-card:hover, .el-upload:focus{
+    border-color:$main-color;
+    color:$main-color;
+    &.el-upload--picture-card i{
+      color:$main-color;
+    }
+  }
+  .el-upload-list--picture-card .el-upload-list__item{
+    width:80px;
+    height:80px;
+    margin: 0 8px 0px 0;
+  }
+  .upload-item{
+    .el-form-item__content{
+      line-height: 0;
+    }
+  }
+  .el-upload-dragger{
+    border: 0;
+  }
+  .comm-opera .el-button i{
+    color:#fff;
+  }
+  .el-coll .el-button i{
+    color:#fff;
+  }
+  .el-coll .node{
+    span{
+      display: inline-block;
+      width:100%;
+      height:100%;
+    }
+  }
+}

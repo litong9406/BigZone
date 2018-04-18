@@ -1,0 +1,34 @@
+.app{
+  .el-input__inner{
+    height:40px;
+  }
+  .el-select .el-input .el-select__caret.is-reverse{
+    color:#EC8105;
+  }
+  .el-select-dropdown__item.selected{
+    color:#EC8105;    
+  }
+  .el-select .el-input.is-focus .el-input__inner{
+    border-color:#EC8105;    
+  }
+  .el-input__inner:focus{
+    border-color:#EC8105;
+  }
+  .el-checkbox{
+    display: block;
+  }
+  .el-checkbox+.el-checkbox{
+    margin-left: 0
+  }
+  .el-upload{
+    &.el-upload--picture{
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid #e5e5e5;
+    }
+  }
+  .el-textarea__inner:focus{
+    border-color:#EC8105;
+  }
+}
